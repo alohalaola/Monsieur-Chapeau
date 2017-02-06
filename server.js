@@ -37,7 +37,7 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 
 slapp.message('download toolkit', ['mention', 'direct_message'], (msg) => {
   msg.say({
-    text: 'Here you can find the latest SRF Global-Design Toolkit for Sketch:\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type download \'help\''.',
+    text: 'Here you can find the latest SRF Global-Design Toolkit for Sketch:\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type download \'help\'.',
     attachments: [{
       text: 'The SRG Toolkit contains all global design elements you need to start of with your design',
       title: 'SRF Global-Design Toolkit',
