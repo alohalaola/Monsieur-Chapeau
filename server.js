@@ -34,6 +34,22 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT)
 })
 
+
+slapp.message('download toolkit', ['mention', 'direct_message'], (msg) => {
+  msg.say({
+    text: 'Here you can find the latest SRF Global-Design Toolkit for Sketch:\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type download \'help\''.',
+    attachments: [{
+      text: 'The SRG Toolkit contains all global design elements you need to start of with your design',
+      title: 'SRF Global-Design Toolkit',
+      image_url: 'http://mv7.ch/chapeau/srf-app-global-ui-elements.png',
+      title_link: 'http://mv7.ch/chapeau/srf_global_design.sketch',
+      color: '#50E3C2'
+    }]
+  })
+  
+  msg.say(`Here you can find the latest SRF Global-Design Toolkit for Sketch: http://mv7.ch/chapeau/srf_global_design.sketch\nhttp://mv7.ch/chapeau/srf-app-global-ui-elements.png?" + Math.floor(Math.random() * 1000) + "\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type 'download fonts'.`)
+  
+
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
 slapp
   .message('^(hi|hello|hey)$', ['direct_mention', 'direct_message'], (msg, text) => {
