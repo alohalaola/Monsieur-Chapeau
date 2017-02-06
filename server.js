@@ -37,7 +37,7 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 
 slapp.message('download toolkit', ['mention', 'direct_message'], (msg) => {  
   msg.say({
-    text: 'Here you can find the latest SRF Global-Design Toolkit for Sketch:\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type download \'help\'.',
+    text: 'Here you can find the latest SRF Global-Design Toolkit for Sketch:\nSince this is your first download, make sure you have installed all necessary SRF fonts too. If not, simply type \'download fonts\'.',
     attachments: [{
       text: 'The SRG Toolkit contains all global design elements you need to start of with your design',
       title: 'SRF Global-Design Toolkit',
@@ -47,8 +47,20 @@ slapp.message('download toolkit', ['mention', 'direct_message'], (msg) => {
     }]
   })
 }) 
-  
-  
+
+slapp.message('download fonts', ['mention', 'direct_message'], (msg) => {  
+  msg.say({
+    text: 'Here you go! Just copy the font files into your system font library to make them available in sketch.',
+    attachments: [{
+      text: 'All SRF Web fonts including Serif and Non-Serif',
+      title: 'SRF Web Fonts',
+      image_url: 'http://mv7.ch/chapeau/srg-ssr-type.png',
+      title_link: 'http://brandbox.srf.ch/download/attachments/3506918/SRG%20SSR%20Type_Web.zip?version=1&modificationDate=1481035992887&api=v2',
+      color: '#50E3C2'
+    }]
+  })
+})   
+   
   //msg.say(`Here you can find the latest SRF Global-Design Toolkit for Sketch: http://mv7.ch/chapeau/srf_global_design.sketch\nhttp://mv7.ch/chapeau/srf-app-global-ui-elements.png?" + Math.floor(Math.random() * 1000) + "\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type 'download fonts'.`)
   
 
