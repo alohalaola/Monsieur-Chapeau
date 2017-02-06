@@ -38,7 +38,7 @@ slapp.message('help', ['mention', 'direct_message'], (msg) => {
 slapp
   .message('^(hi|hello|hey)$', ['direct_mention', 'direct_message'], (msg, text) => {
     msg
-      .say(`${text}, how are you?`)
+      .say(`${text} :spock-hand:, \nAs you already know, my name is Monsieur Chapeau. Try to pronounce chatbox with a sexy french accent, :kiss: there you go!\nBack to business, I offer you easy access to the design styleguide :art:. Type help to get *keywords*.`)
       // sends next event from user to this route, passing along state
       .route('how-are-you', { greeting: text })
   })
