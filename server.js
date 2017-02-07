@@ -124,12 +124,6 @@ slapp.message('^(button|go|los)$', ['mention', 'direct_message'], (msg) => {
                     "type": "button",
                     "value": "klick mich"
                 }
-                              {
-                    "name": "Or touch me",
-                    "text": "Please touch me",
-                    "type": "button",
-                    "value": "https://www.srf.ch"
-                }
             ]
     }]
   })
