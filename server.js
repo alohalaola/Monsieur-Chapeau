@@ -120,10 +120,22 @@ slapp.message('^(button|go|los)$', ['mention', 'direct_message'], (msg) => {
             'actions': [
                 {
                     "name": "Klick hier",
-                    "text": "Klich mich",
+                    "text": "Klick mich",
                     "type": "button",
                     "value": "klick mich"
-                }
+                },
+                {
+                    "name": "Oder hier",
+                    "text": "Oder mich",
+                    "type": "button",
+                    "value": "yes"
+                },
+                {
+                    "name": "Nein hier",
+                    "text": "Oder hier",
+                    "type": "button",
+                    "value": "dritter button"
+                }   
             ]
     }]
   })
