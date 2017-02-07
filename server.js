@@ -39,7 +39,7 @@ slapp.message('welcome', ['mention', 'direct_message'], (msg) => {
     text: 'Bonjour à tous! It\'se me, Chapeau!',
     attachments: [{
       text: 'I\'m not yet that intelligent. I need to pracitce my vocabulary!',
-      title: 'Find me the greatest accent coach in the werld',
+      title: 'Find me the greatest accent coach in se werld',
       title_link: welcomeLink,
       color: '#50E3C2'
     }]
