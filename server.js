@@ -60,9 +60,34 @@ slapp.message('download fonts', ['mention', 'direct_message'], (msg) => {
     }]
   })
 })   
-   
-  //msg.say(`Here you can find the latest SRF Global-Design Toolkit for Sketch: http://mv7.ch/chapeau/srf_global_design.sketch\nhttp://mv7.ch/chapeau/srf-app-global-ui-elements.png?" + Math.floor(Math.random() * 1000) + "\nSince this is your first download, make sure you have installed the SRF fonts. If not, simply type 'download fonts'.`)
   
+
+slapp.message('touch this', ['mention', 'direct_message'], (msg) => {  
+  msg.say({
+    text: 'Monsieur Chapeau is now able to give you buttons!',
+    attachments: [{
+      text: 'Don\'t touch this',
+      title: 'Button example',
+      fallback: 'Seems like you are not allowed to press buttons.',
+      callback_id: 'nobuttons',
+      color: '#50E3C2',
+      attachment_type: 'default',
+            'actions': [
+                {
+                    "name": "touch me",
+                    "text": "Touch me",
+                    "type": "button",
+                    "value": "touch me"
+                }
+            ]
+    }]
+  })
+})  
+
+slapp.message('touch me', ['mention', 'direct_message'], (msg) => {  
+    msg.say([':wave:', ':pray:', ':raised_hands:'])
+})
+
 
 // "Conversation" flow that tracks state - kicks off when user says hi, hello or hey
 slapp
