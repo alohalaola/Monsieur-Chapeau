@@ -29,11 +29,31 @@ I will respond to the following messages:
 // Setup different handlers for messages
 //*********************************************
 
+slapp.message('welcome', ['mention', 'direct_message'], (msg) => { 
+  var welcomeLink = 'https://www.youtube.com/watch?v=-VsmF9m_Nt8'
+  //  only 50% of the time
+  if (Math.random() < 0.5) {
+    welcomeLink = 'https://www.youtube.com/watch?v=lLuc6rtWkrM'
+  }
+  msg.say({
+    text: 'Bonjour à tous! It\'se me, Chapeau!',
+    attachments: [{
+      text: 'I\'m not yet that intelligent. I need to pracitce my vocabulary!',
+      title: 'Give me the words',
+      title_link: welcomeLink,
+      color: '#50E3C2'
+    }]
+  })
+}) 
+
+
+
+
+
 // response to the user typing "help"
 slapp.message('help', ['mention', 'direct_message'], (msg) => {
   msg.say(HELP_TEXT)
 })
-
 
 slapp.message('download toolkit', ['mention', 'direct_message'], (msg) => {  
   msg.say({
@@ -47,6 +67,7 @@ slapp.message('download toolkit', ['mention', 'direct_message'], (msg) => {
     }]
   })
 }) 
+
 
 slapp.message('download fonts', ['mention', 'direct_message'], (msg) => {  
   msg.say({
