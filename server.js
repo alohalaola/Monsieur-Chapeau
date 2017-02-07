@@ -30,16 +30,16 @@ I will respond to the following messages:
 //*********************************************
 
 slapp.message('welcome', ['mention', 'direct_message'], (msg) => { 
-  var welcomeLink = 'https://www.youtube.com/watch?v=-VsmF9m_Nt8'
+  //var welcomeLink = 'https://www.youtube.com/watch?v=-VsmF9m_Nt8'
   //  only 50% of the time
-  if (Math.random() < 0.5) {
-    welcomeLink = 'https://www.youtube.com/watch?v=lLuc6rtWkrM'
-  }
+  //if (Math.random() < 0.5) {
+  var welcomeLink = 'https://www.youtube.com/watch?v=lLuc6rtWkrM'
+  //}
   msg.say({
     text: 'Bonjour à tous! It\'se me, Chapeau!',
     attachments: [{
       text: 'I\'m not yet that intelligent. I need to pracitce my vocabulary!',
-      title: 'Give me the words',
+      title: 'Find me the greatest accent coach in the werld',
       title_link: welcomeLink,
       color: '#50E3C2'
     }]
