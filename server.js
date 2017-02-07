@@ -100,6 +100,42 @@ slapp.message('touch this', ['mention', 'direct_message'], (msg) => {
                     "type": "button",
                     "value": "touch me"
                 }
+                              {
+                    "name": "Or touch me",
+                    "text": "Please touch me",
+                    "type": "button",
+                    "value": "https://www.srf.ch"
+                }
+            ]
+    }]
+  })
+})  
+
+
+// TEST neuer Button Flow mit mehreren Startmöglichkeiten
+slapp.message('^(button|go|los)$', ['mention', 'direct_message'], (msg) => {  
+  msg.say({
+    text: 'Wie cool sind diese Buttons!',
+    attachments: [{
+      text: 'Go touch this!',
+      title: 'Buttons Beispiel',
+      fallback: 'Seems like you are not allowed to press buttons.',
+      callback_id: 'nobuttons',
+      color: '#00ff00',
+      attachment_type: 'default',
+            'actions': [
+                {
+                    "name": "Klick hier",
+                    "text": "Klich mich",
+                    "type": "button",
+                    "value": "klick mich"
+                }
+                              {
+                    "name": "Or touch me",
+                    "text": "Please touch me",
+                    "type": "button",
+                    "value": "https://www.srf.ch"
+                }
             ]
     }]
   })
